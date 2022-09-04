@@ -1,8 +1,284 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Montserrat+Alternates:wght@300;400;500;700&display=swap');
+
+df-messenger {
+    --df-messenger-bot-message: #FFFFFF; /* Balao de texto bot */
+    --df-messenger-button-titlebar-color: #356e22; /* Botão flutuante e barra do topo da caixa de mensagem */
+    --df-messenger-chat-background-color: #ECF3EA; /* Background caixa de texto*/
+    --df-messenger-font-color: #2D0404; /* fonte das duas mensagens*/
+    --df-messenger-send-icon: #2D0404; /*   */
+    --df-messenger-user-message:  #C6DFBE;/* Balao de texto usuário */
+   }
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
 }
 
-a {
-  color: #00B7FF;
+body{
+    border-top: 8px solid #C8191E;
+    font-size: 100%;
+    background-image: url("/images/bk.svg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100%;
+    background-position: bottom right;
+    height: 100vh;
+}
+
+
+.cabecalho{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    padding: 65px;
+    padding-top: 0px;
+}
+
+
+.cabecalho-menu{
+    display: flex;
+    gap: 32px; ;
+}
+
+.cabecalho-menu-item{
+    font-family: 'Montserrat Alternates', sans-serif;
+    color: #192614;
+    font-weight: 400;
+    font-size: 18px;
+}
+
+
+.conteudo-principal{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-grow: 4;
+    gap:40px;
+    padding-top: 100px;
+    justify-content: center;
+	width: 60%;
+	margin: auto auto;
+}
+
+.conteudo-principal-imagem1 {
+        height: 50%;
+        width: 50%;
+        display: flex;
+        justify-content:flex-start;
+}
+
+.conteudo-principal-imagem2{
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content:left;
+        padding-top: 20%;
+        
+    }
+    
+.conteudo-imgfinal{
+	position: absolute;
+	bottom: 80px;
+	right: 33px;
+	display: flex;
+	width: 16vw;
+    min-width: 100px;
+}
+    
+
+.conteudo-principal-escrito{
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+	width: 50%;
+
+}
+
+.conteudo-principal-escrito-titulo{
+    font-family: 'Montserrat Alternates', sans-serif;
+    color: #192614;
+    font-weight: 400;
+    font-size: 5.2vw;
+    line-height: 3.8vw;
+}
+
+
+.conteudo-principal-escrito-subtitulo{
+    font-family: 'Montserrat', sans-serif;
+    color: #192614;
+    font-weight: 400;
+    font-size: 1.6vw;
+}
+
+
+.rodape-conteudo{
+    font-family: 'Montserrat', sans-serif;
+    color: #192614;
+    font-weight: 400;
+    font-size: 14px;
+    display: flex;
+    justify-content:center;
+}
+
+
+/* Media Query for Mobile Devices */
+@media (max-width: 480px) {
+    .conteudo {
+        width: 100%;
+        height: 100%;
+    }
+
+    img {
+        max-width: 100%;
+        max-height: 100%;
+    }
+
+    .cabecalho{
+        display: flex;
+        flex-direction: row;
+        padding: 20px;
+        justify-content: center;
+        padding-left: 24px;
+    }
+
+    .cabecalho-img{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+   
+    .conteudo-principal{
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        gap: 20px;
+        padding-top: 10px;
+        justify-content: flex-start;
+        font-size: 24px;
+        width: 100%;
+    }
+
+    .conteudo-principal-imagem1 {
+        height: 40%;
+        width: 40%;
+        display: flex;
+        justify-content:flex-start;
+        transform: translateY(25%);
+    }
+
+    body {
+        font-size: 100%;
+        background-image: url("/images/bk-mobile.svg");
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: 100%;
+        background-position: top right;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .conteudo-principal-escrito{
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    
+    }
+
+    .conteudo-principal-escrito-titulo{
+        font-family: 'Montserrat Alternates', sans-serif;
+        color: #192614;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 22px;
+    }
+    
+    
+    .conteudo-principal-escrito-subtitulo{
+        font-family: 'Montserrat', sans-serif;
+        color: #192614;
+        font-weight: 400;
+        font-size: 12px;
+    }
+
+}
+  
+
+/* Media Query for low resolution  Tablets, Ipads */
+@media (min-width: 481px) and (max-width: 767px) {
+    img {
+        max-width: 100%;
+        max-height: 100%;
+       }
+
+    .cabecalho{
+        display: flex;
+        flex-direction: row;
+        padding: 20px;
+        justify-content: center;
+        padding-left: 24px;
+    }
+
+    .cabecalho-img{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+   
+    .conteudo-principal{
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        flex-grow: 4;
+        gap: 20px;
+        padding-top: 10px;
+        justify-content: flex-start;
+        width: 100% ;
+    }
+
+    .conteudo-principal-imagem1 {
+        transform: translateY(15%);
+        height: 32%;
+        width: 32%;
+    }
+
+    body {
+        font-size: 100%;
+        background-image: url("/images/bk-mobile.svg");
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: 100%;
+        background-position: top right;
+    }
+
+    .conteudo-principal-escrito{
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    
+    }
+
+    .conteudo-principal-escrito-titulo{
+        font-family: 'Montserrat Alternates', sans-serif;
+        color: #192614;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 22px;
+    }
+    
+    
+    .conteudo-principal-escrito-subtitulo{
+        font-family: 'Montserrat', sans-serif;
+        color: #192614;
+        font-weight: 400;
+        font-size: 12px;
+    }
+    
+
 }
